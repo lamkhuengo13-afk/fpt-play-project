@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT Play</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <h2>Đăng nhập</h2>
+        <input type="text" placeholder="Tên đăng nhập">
+        <input type="password" placeholder="Mật khẩu">
+        <div class="modal-buttons">
+            <button class="btn-close" onclick="dongDangNhap()">Đóng</button>
+            <button class="btn-login">Xác nhận</button>
+        </div>
+    </div>
+</div>
+
+  <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href=""><img src="logofpt.png" alt="Logo"></a></li>
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Truyền hình</a></li>
+                    <li><a href="">Phim bộ</a></li>
+                    <li><a href="">V.League</a></li>
+                    <li><a href="">Thiếu nhi</a></li>
+                    <li class="dropdown">
+                        <a href="#">Xem thêm <i class="fa-solid fa-caret-down" style="margin-left: 5px; font-size: 12px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Hành động</a></li>
+                            <li><a href="#">Kinh dị</a></li>
+                            <li><a href="#">Hoạt hình</a></li>
+                            <li><a href="#">Tâm lý & Tình cảm</a></li>
+                            <li><a href="#">Khoa học viễn tưởng</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    <nav class="icon">
+    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href=""><i class="fa-regular fa-bell"></i></a>
+    <a class="muagoi" href=""><i class="fa-solid fa-wallet" style="margin-right: 5px;"></i> Mua gói</a>
+    
+    <a href="#" onclick="moDangNhap()"><i class="fa-solid fa-circle-user" style="font-size: 25px;"></i> Đăng nhập</a>
+    
+    </nav>
+        </div>
+    </header>
+
+    <main>
+<div class="top_main">
+            <a href=""><img id="banner" src="phim/ngang_muado.jpg" alt="Banner"></a>
+            <div id="thongTinPhim">
+                <div id="xem">Xem ngay</div>
+                <a id="trailer" href="https://youtu.be/BD6PoZJdt_M" target="_blank">Trailer</a>
+                <div id="tenPhim">Mưa đỏ</div>                    
+                <div id="theLoai">Lịch sử / Chiến tranh</div>
+                <div id="quocGia">Việt Nam</div>
+                <div id="nam">2025</div>
+                <div id="thoiLuong">2h</div>
+                <div id="doTuoi">16+</div>
+            </div>
+        </div>
+
+<div class="mid_main">
+            <div class="ngang slider-container">
+                <h1>Phim Lịch Sử & Nghệ Thuật</h1>
+                <button class="slider-btn prev-btn" onclick="moveSlider(this, -1)">❮</button>
+                <div class="phim_ngang">
+                    <div onclick="chonPhim(1)"><img src="phim/Đất Rừng Phương Nam.jpg" alt=""><br>Đất rừng phương Nam</div>                    
+                    <div onclick="chonPhim(2)"><img src="phim/Tro tàn rực rỡ.jpg" alt=""><br>Tro tàn rực rỡ</div>
+                    <div onclick="chonPhim(3)"><img src="phim/Mưa đỏ.jpg" alt=""><br>Mưa đỏ</div>
+                    <div onclick="chonPhim(4)"><img src="phim/Mùi cỏ cháy.jpg" alt=""><br>Mùi cỏ cháy</div>
+                    <div onclick="chonPhim(5)"><img src="phim/Địa đạo.jpg" alt=""><br>Địa đạo</div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlider(this, 1)">❯</button>
+            </div>
+
+            <div class="ngang slider-container">
+                <h1>Phim Việt Đình Đám</h1>
+                <button class="slider-btn prev-btn" onclick="moveSlider(this, -1)">❮</button>
+                <div class="phim_ngang">
+                    <div onclick="chonPhim(1)"><img src="phim/Mai.jpg" alt=""><br>Mai</div>
+                    <div onclick="chonPhim(2)"><img src="phim/Mắt biếc.jpg" alt=""><br>Mắt biếc</div>
+                    <div onclick="chonPhim(3)"><img src="phim/Bố già.jpg" alt=""><br>Bố già</div>
+                    <div onclick="chonPhim(19)"><img src="phim/Kẻ ăn hồn.jpg" alt=""><br>Kẻ ăn hồn</div>
+                    <div onclick="chonPhim(20)"><img src="phim/Quỷ cẩu.jpg" alt=""><br>Quỷ cẩu</div>
+                    <div onclick="chonPhim(22)"><img src="phim/QUỶ NHẬP TRÀNG.jpg" alt=""><br>Quỷ nhập tràng</div>
+                    <div onclick="chonPhim(23)"><img src="phim/ĐÈN ÂM HỒN.jpg" alt=""><br>Đèn âm hồn</div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlider(this, 1)">❯</button>
+            </div>
+
+            <div class="mini slider-container">
+                <h1>Cartoon Network</h1>
+                <button class="slider-btn prev-btn" onclick="moveSlider(this, -1)">❮</button>
+                <div class="phim_mini">
+                    <div onclick="chonPhim(4)"><img src="phim/Giờ phiêu lưu.jpg" alt=""><br>Adventure Time</div>
+                    <div onclick="chonPhim(5)"><img src="phim/Thế giới kì diệu của Gumball.jpg" alt=""><br>Gumball</div>
+                    <div onclick="chonPhim(6)"><img src="phim/We bare bears.jpg" alt=""><br>We Bare Bears</div>
+                    <div onclick="chonPhim(7)"><img src="phim/The Powerpuff Girls.jpg" alt=""><br>Powerpuff Girls</div>
+                    <div onclick="chonPhim(8)"><img src="phim/Teen titans go.jpg" alt=""><br>Teen Titans Go!</div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlider(this, 1)">❯</button>
+            </div>
+
+            <div class="doc slider-container">
+                <h1>Hoạt hình Nhật Bản</h1>
+                <button class="slider-btn prev-btn" onclick="moveSlider(this, -1)">❮</button>
+                <div class="phim_doc">
+                    <div onclick="chonPhim(9)"><img src="phim/Demo slayer.jpg" alt=""><br>Demon Slayer</div>
+                    <div onclick="chonPhim(10)"><img src="phim/Spy x Family.jpg" alt=""><br>Spy x Family</div>
+                    <div onclick="chonPhim(11)"><img src="phim/Spirited Away.jpg" alt=""><br>Spirited Away</div>
+                    <div onclick="chonPhim(12)"><img src="phim/Howl's moving castle.jpg" alt=""><br>Howl's Moving Castle</div>
+                    <div onclick="chonPhim(13)"><img src="phim/Suzume No Tojimari.jpg" alt=""><br>Suzume</div>
+                    <div onclick="chonPhim(21)"><img src="phim/Grave of the fireflies.jpg" alt=""><br>Mộ đom đóm</div>
+                    <div onclick="chonPhim(9)"><img src="phim/minimalist poster.jpg" alt=""><br>Khu rừng đom đóm</div>
+                    <div onclick="chonPhim(10)"><img src="phim/Himouto! Umaru-chan.jpg" alt=""><br>Umaru-chan</div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlider(this, 1)">❯</button>
+            </div>
+
+            <div class="doc sanrioworld slider-container">
+                <h1>Vũ trụ Sanrio</h1>
+                <button class="slider-btn prev-btn" onclick="moveSlider(this, -1)">❮</button>
+                <div class="phim_doc">
+                    <div onclick="chonPhim(14)"><img src="phim/Hello Kitty.jpg" alt=""><br>Hello Kitty</div>
+                    <div onclick="chonPhim(15)"><img src="phim/Kuromi.jpg" alt=""><br>Kuromi</div>
+                    <div onclick="chonPhim(16)"><img src="phim/Cinnamoroll.jpg" alt=""><br>Cinnamoroll</div>
+                    <div onclick="chonPhim(17)"><img src="phim/My Meolody.jpg" alt=""><br>My Melody</div>
+                    <div onclick="chonPhim(18)"><img src="phim/Sanrio.jpg" alt=""><br>Sanrio Friends</div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlider(this, 1)">❯</button>
+            </div>
+
+            <div class="danhmuc">
+                <h1>Danh mục</h1>
+                <div class="danhmuc_icon">
+                    <a href="">
+                        <div class="truyenhinh">
+                            <i class="fa-solid fa-tv"></i><br>
+                            <h2>Truyền hình</h2>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="tructiep">
+                            <i class="fa-solid fa-calendar-week"></i>
+                            <h2>Trực tiếp</h2>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="truyenhinh">
+                            <i class="fa-solid fa-tv"></i><br>
+                            <h2>Truyền hình</h2>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="tructiep">
+                            <i class="fa-solid fa-calendar-week"></i>
+                            <h2>Trực tiếp</h2>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="truyenhinh">
+                            <i class="fa-solid fa-tv"></i><br>
+                            <h2>Truyền hình</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<button id="lenDauTrang" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"> ⬆ </button>
+
+    <footer>
+       <div class="lienhe">
+           <div class="doitac">
+               <a href=""><img src="logofpt.png" alt="Logo FPT Play"></a>
+               <br>
+               <div class="certification" style="margin-top: 15px;">
+                   <img src="logodmca.jpg" alt="DMCA" style="height: 30px; margin-right: 10px;">
+                   <img src="logobct.jpg" alt="Đã thông báo Bộ Công Thương" style="height: 30px;">
+               </div>
+           </div>
+
+           <div class="lhfpt">
+               Sản phẩm & Dịch vụ
+               <br><br>
+               <ul>
+                   <li><a href="">Giới thiệu</a> | <a href="">Các gói dịch vụ</a></li>
+                   <li><a href="">Trung tâm hỗ trợ</a> | <a href="">Thông tin</a></li>
+                   <li><a href="">Quảng cáo</a> | <a href="">Mua gói</a> | <a href="">Bảo hành</a></li>
+               </ul>
+           </div>
+
+           <div class="lhfpt">
+               Quy định & Thông tin
+               <br><br>
+               <ul>
+                   <li><a href="">Điều khoản sử dụng</a> | <a href="">Chính sách thanh toán</a></li>
+                   <li><a href="">Chính sách bảo mật</a> | <a href="">Cam kết quyền riêng tư</a></li>
+               </ul>
+           </div>
+
+           <div class="phone">
+               <div style="font-weight: bold;">
+                   <i class="fa-solid fa-phone"></i> Hotline: 1900 6600
+               </div>
+               <br>
+               <div>
+                   <i class="fa-solid fa-envelope"></i> Email: hotrofptplay@fpt.com
+               </div>
+               <p>Theo dõi chúng tôi trên:</p>
+               <div class="mxh">
+                   <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                   <a href=""><i class="fa-brands fa-youtube"></i></a>
+               </div>
+           </div>
+       </div>
+
+       <div class="thongtin">
+           <div class="thongtin_text">
+               Người đại diện: Ông Hoàng Việt Anh
+               <br>
+               Trụ sở: Tầng 8, tòa nhà FPT Tower, số 10 Phạm Văn Bạch, Cầu Giấy, Hà Nội
+               <br>
+               Số giấy chứng nhận đăng ký kinh doanh: 0101778163 do Sở Kế hoạch Đầu tư Thành phố Hà Nội cấp vào ngày 28/07/2005
+               <br>
+               Giấy phép Cung cấp Dịch vụ Phát thanh, Truyền hình trên mạng Internet số 377/GP-BTTTT cấp ngày 10/10/2023.
+           </div>
+           <div class="thongtin_icon">
+               <div class="footer-col app-download">
+                   <h3 style="color: white; margin-bottom: 10px;">Tải ứng dụng trên</h3>
+                   <a href=""><img src="logochplayappstore.jpg" alt="Download on App Store" style="width: 200px;"></a>
+               </div>
+           </div>
+       </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
