@@ -361,6 +361,90 @@ main {
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
+
+@media screen and (max-width: 768px) {
+  .container, 
+  main, 
+  footer {
+    width: 95%; 
+  }
+
+  .container {
+    flex-wrap: wrap; 
+  }
+  ul {
+    overflow-x: auto; 
+    white-space: nowrap;
+    padding-bottom: 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  ul::-webkit-scrollbar {
+    display: none;
+  }
+  li {
+    margin-right: 15px;
+    font-size: 13px; 
+  }
+  .icon {
+    display: none; 
+  }
+
+  .top_main img {
+    height: 300px; 
+  }
+  #thongTinPhim {
+    left: 10px;
+    bottom: 10px;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 10px;
+    width: auto;
+    padding: 12px;
+  }
+  #tenPhim {
+    font-size: 16px;
+  }
+  #xem, #trailer {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .phim_ngang > div, 
+  .phim_mini > div, 
+  .phim_doc > div {
+    flex: 0 0 120px; 
+    font-size: 13px;
+  }
+  .phim_ngang img, 
+  .phim_mini img, 
+  .phim_doc img {
+    height: 180px; 
+  }
+  
+  .slider-btn {
+    display: none; 
+  }
+
+  .danhmuc_icon {
+    flex-direction: column; 
+    gap: 10px;
+  }
+  .truyenhinh, 
+  .tructiep {
+    padding: 20px;
+  }
+
+  .lienhe, 
+  .thongtin {
+    flex-direction: column; 
+    gap: 20px;
+  }
+  .thongtin_text {
+    width: 100%;
+  }
+}
+
 #lenDauTrang:hover {
     background: white;
     color: red;
